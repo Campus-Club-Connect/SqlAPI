@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "sqlapi-production.up.railway.app",
+    origin: "nnnp",
      credentials: true,
   })
 );
