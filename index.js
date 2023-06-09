@@ -55,6 +55,6 @@ app.use("/api/clubs", clubRoutes);
 app.use("/api/affiliations", affiliationRoutes);
 app.use("/api/chats", chatRoutes);
 
-app.listen(process.env.PORT () => {
+app.listen(process.env.PORT || 8088() => {
   console.log("API Working!");
 });
