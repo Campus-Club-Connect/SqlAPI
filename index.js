@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "sqlapi-production.up.railway.app",
+     credentials: true,
   })
 );
 app.use(cookieParser());
