@@ -22,8 +22,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "nnnp",
-     credentials: true,
+    origin: "api-production-a06e.up.railway.app",
   })
 );
 app.use(cookieParser());
@@ -44,7 +43,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json(file.filename);
 });
 
-app.use("/", authRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
@@ -55,4 +54,6 @@ app.use("/api/clubs", clubRoutes);
 app.use("/api/affiliations", affiliationRoutes);
 app.use("/api/chats", chatRoutes);
 
-app.listen(process.env.PORT || 8088)
+app.listen(8800, () => {
+  console.log("API Working!");
+});
