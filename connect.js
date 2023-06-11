@@ -8,6 +8,7 @@ export const db = mysql.createConnection({
   password: process.env.RAILWAY_DATABASE_PASSWORD || "",
   database: process.env.RAILWAY_DATABASE_NAME || "railway",
   port: process.env.RAILWAY_DATABASE_PORT || 3306,
+  mysqlUrl : process.env.RAILWAY_DATABASE_URL
 });
 
 db.connect((err) => {
