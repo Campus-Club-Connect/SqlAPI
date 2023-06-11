@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "api-production-a06e.up.railway.app",
+    origin: "https://clubcampusconnect.onrender.com",
   })
 );
 app.use(cookieParser());
