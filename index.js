@@ -55,5 +55,5 @@ app.use("/api/affiliations", affiliationRoutes);
 app.use("/api/chats", chatRoutes);
 
 app.listen(process.env.RAILWAY_DATABASE_PORT, () => {
-  console.log("API Working!");
+  console.log("API Worksading!");
 });
