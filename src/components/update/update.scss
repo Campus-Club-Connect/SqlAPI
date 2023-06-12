@@ -1,0 +1,180 @@
+@import "../../style.scss";
+
+.update {
+  @include themify($themes) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    overflow: auto;
+
+    .wrapper {
+      margin: auto;
+      margin-top: 5%;
+      width: 40%;
+      background-color: themed("bg");
+      padding: 50px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      position: relative;
+      border-radius: 8px;
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        color: themed("textColor");
+        margin-bottom: 2rem;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        color: themed("textColor");
+
+        .files {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 50px;
+          margin-bottom: 30px;
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 1.3rem;
+        }
+
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          .editContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+
+            .edit {
+              color: themed("textColor");
+              cursor: pointer;
+              transition: 0.2s ease-in-out;
+              padding: 0.5em 1em;
+              border-radius: 208px;
+            }
+            .edit:hover {
+              background-color: themed("bgSoft");
+            }
+            .edit:active {
+              scale: 96%;
+              transform: perspective(1px) translateZ(0);
+              backface-visibility: hidden;
+              transition: 0.1s;
+            }
+          }
+
+          .profileImgContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+          .coverImgContainer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 80%;
+              height: 30vh;
+              border-radius: 8px;
+              object-fit: cover;
+            }
+          }
+        }
+
+        input {
+          padding: 5px;
+          border: none;
+          border-bottom: 1px solid themed("border");
+          color: gray;
+          background-color: transparent;
+        }
+
+        .submission {
+          display: flex;
+          justify-content: space-around;
+          button {
+            border: none;
+            padding: 1em 2em;
+            border-radius: 8px;
+            cursor: pointer;
+            color: white;
+            background-color: #000000;
+          }
+          .cancel {
+            border: 2px solid themed("textColor");
+            background-color: transparent;
+            color: themed("textColor");
+          }
+          button:hover {
+            scale: 101%;
+          }
+          button:active {
+            scale: 100%;
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50%;
+        background-color: themed("bg");
+        padding: 0.6rem 0.8rem;
+        cursor: pointer;
+        color: themed("textColor");
+        transition: 0.2s;
+      }
+      .close:hover {
+        background-color: themed("bgSoft");
+        transition: 0.2s;
+      }
+      .close:active {
+        background-color: themed("bgSoft");
+        transition: 0.2s;
+        scale: 90%;
+        transform: perspective(1px) translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
+  }
+}

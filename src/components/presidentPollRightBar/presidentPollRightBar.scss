@@ -1,0 +1,127 @@
+@import "../../style.scss";
+
+.presidentPollRightBar {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    padding: 0px 20px;
+
+    @include mobile {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: themed("bg");
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+
+      .item {
+        margin-bottom: 8px;
+        background-color: themed("bg");
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        h3 {
+          padding: 20px;
+          border-radius: 8px 8px 0px 0px;
+          text-align: center;
+          font-size: 1.6rem;
+          color: themed("bg");
+          font-weight: 400;
+          background-color: rgb(33, 50, 102);
+          margin-bottom: 0.3em;
+        }
+
+        .reviewDisplay {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input {
+            width: 84%;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid themed("border");
+            border-radius: 0.4em;
+            background-color: transparent;
+            color: themed("text");
+          }
+        }
+        .bottom {
+          width: 90%;
+          border: 1px dashed themed("textSoftColor");
+          border-radius: 8px;
+          height: 200px;
+          overflow: hidden;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          margin: auto;
+
+          .imageAdd {
+            padding: 2em 4.3em;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .file {
+            position: absolute;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      .writeReview {
+        width: 95%;
+        margin: auto;
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        button {
+          align-self: flex-end;
+          border: 1px solid themed("textColor");
+          color: themed("textColor");
+          background: transparent;
+          padding: 0.5em 1.5em;
+          cursor: pointer;
+          border-radius: 200rem;
+          transition: 0.5s ease;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        button:hover {
+          scale: 97%;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+}

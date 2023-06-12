@@ -1,0 +1,164 @@
+@import "../../style.scss";
+
+.slogin {
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #000000;
+    overflow: hidden;
+    min-height: 600px;
+    max-width: 450px;
+
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .logo {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .LogoImg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .loginCard {
+      padding: 2em;
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      background-color: #ffffff;
+      border-radius: 8px;
+
+      h1 {
+        color: #000000;
+        font-weight: 100;
+        font-size: 1.2rem;
+        text-align: center;
+
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        /* Input Field Designs */
+        .inputBox {
+          position: relative;
+          width: 90%;
+
+          input {
+            width: 100%;
+            padding: 0.9em;
+            border: 1px solid #dddfe2;
+            border-radius: 5px;
+            outline: none;
+            color: #000000;
+            font-size: 0.95rem;
+            transition: 0.1s;
+          }
+          input:focus {
+            border-color: #132f6b;
+          }
+          input:valid {
+            border-color: #132f6b;
+          }
+
+          /* Placeholder Designs */
+          .placeholder {
+            position: absolute;
+            left: 4%;
+            top: 50%;
+            translate: 0% -50%;
+
+            padding: 3px;
+            pointer-events: none;
+            font-size: 0.9rem;
+            color: #a8a8a8;
+            text-transform: capitalize;
+            transition: 0.3s;
+          }
+          input:valid ~ .placeholder,
+          input:focus ~ .placeholder {
+            color: #132f6b;
+            transform: translateY(-110%);
+            background: #ffffff;
+            border-radius: 4px;
+            font-size: 0.8rem;
+          }
+        }
+
+        .buttonSpace {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          height: 55px;
+
+          #evil-button {
+            // Button Evil
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+          }
+
+          button {
+            width: 25%;
+            padding: 12px;
+            background: none;
+            background-color: #213266;
+            color: #ffffff;
+            font-weight: normal;
+            cursor: pointer;
+            border-radius: 0.5em;
+            font-size: 1rem;
+            transition: 0.1s ease-in-out;
+
+            @include mobile {
+              padding: 10px;
+              font-size: 0.8rem;
+            }
+          }
+          button:hover {
+            scale: 99%;
+          }
+          button:focus {
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

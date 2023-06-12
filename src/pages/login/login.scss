@@ -1,0 +1,199 @@
+@import "../../style.scss";
+
+.login {
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  $bgColor: rgba(0, 0, 0, 0.5);
+  $bgColorWhite: rgba(157, 157, 157, 0.5);
+  $textSoft: rgba(188, 188, 188, 1);
+  $textWhite: rgba(255, 255, 255, 1);
+  $transparent: rgba(0, 0, 0, 1);
+
+  /* Change the white to any color */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $transparent inset !important;
+    -webkit-text-fill-color: $textWhite !important;
+  }
+
+  .bgClubs {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+
+    .bgClub {
+      width: 14.28%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+      }
+    }
+  }
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+    overflow: hidden;
+    min-height: 600px;
+    max-width: 450px;
+
+    z-index: 100;
+
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 1.4rem;
+      width: 100%;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .loginCard {
+      padding: 2em;
+
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      background-color: $bgColor;
+      border-radius: 8px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        /* Input Field Designs */
+        .inputBox {
+          position: relative;
+          width: 93%;
+
+          input {
+            width: 100%;
+            padding: 0.9em;
+            border: 1px solid $bgColorWhite;
+            border-radius: 5px;
+            outline: none;
+            color: $textWhite;
+            font-size: 0.95rem;
+            transition: 0.1s;
+            background-color: $bgColor;
+          }
+          input:focus {
+            border-color: $bgColorWhite;
+          }
+          input:valid {
+            border-color: $bgColorWhite;
+          }
+
+          /* Placeholder Designs */
+          .placeholder {
+            position: absolute;
+            left: 4%;
+            top: 50%;
+            translate: 0% -50%;
+
+            padding: 3px;
+            pointer-events: none;
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-transform: capitalize;
+            transition: 0.3s;
+          }
+          input:valid ~ .placeholder,
+          input:focus ~ .placeholder {
+            color: #ffffff;
+            transform: translateY(-110%);
+            background: $bgColor;
+            border-radius: 4px;
+            font-size: 0.8rem;
+          }
+        }
+
+        .buttonSpace {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          height: 45px;
+
+          #evil-button {
+            // Button Evil
+            position: absolute;
+            white-space: nowrap;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0%);
+          }
+
+          button {
+            width: 100%;
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.5em;
+            font-size: 1rem;
+            transition: 0.1s ease-in-out;
+
+            background: none;
+            background-color: white;
+            border: white;
+            color: #213266;
+
+            @include mobile {
+              padding: 10px;
+              font-size: 0.8rem;
+            }
+          }
+          button:hover {
+            scale: 99%;
+          }
+          button:focus {
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+          text-decoration: none;
+          color: $textSoft;
+        }
+        .anchorLink {
+          color: $textSoft;
+        }
+        .anchorLink:hover {
+          color: $textWhite;
+        }
+      }
+    }
+  }
+}

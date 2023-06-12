@@ -1,0 +1,114 @@
+@import "../../style.scss";
+
+.candidates {
+  @include themify($themes) {
+    border-radius: 8px;
+    background-color: themed("bg");
+    color: themed("textColor");
+
+    /* width */
+    ::-webkit-scrollbar {
+      height: 3px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c5c5c5;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      background-color: themed("bg");
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+
+      h4 {
+        text-align: center;
+        background-color: transparent;
+        font-size: 2rem;
+        font-weight: 400;
+        padding: 0.5em 2em;
+        padding-top: 1em;
+      }
+    }
+
+    .scroll {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+
+      .item {
+        min-width: 128px;
+        padding: 1em;
+        // background-color: #000;
+        img {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      button {
+        text-align: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 0.5em 1em;
+        width: 70px;
+        border-radius: 200px;
+        border: 1px solid;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: 1s ease;
+      }
+      button:hover {
+        transition: 1s ease;
+      }
+    }
+    .voteState {
+      border: 2px solid themed("textColor");
+      border-radius: 200px;
+      text-align: center;
+      padding: 0.8em 1.2em;
+      width: 60px;
+      margin: 2rem auto;
+      transition: 1s ease;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      .bgActive {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 200px;
+        background-color: #030b74;
+        z-index: -1;
+        transition: 1s ease;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

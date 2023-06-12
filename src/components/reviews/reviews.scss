@@ -1,0 +1,157 @@
+@import "../../style.scss";
+
+.reviews {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    padding: 0px 20px;
+
+    @include mobile {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .container {
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: themed("bg");
+      .item {
+        // -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        // -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        // box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        margin-bottom: 8px;
+        background-color: themed("bg");
+        border-radius: 8px;
+
+        h3 {
+          padding: 20px;
+          border-radius: 8px 8px 0px 0px;
+          text-align: center;
+          font-size: 1.6rem;
+          color: themed("bg");
+          font-weight: 400;
+          background-color: rgb(33, 50, 102);
+        }
+
+        .reviewDisplay {
+          height: 44vh;
+          overflow: auto;
+
+          &::-webkit-scrollbar {
+            width: 16px;
+            display: none;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #7b7d7f;
+            border: 7px solid themed("bgSoft");
+            border-radius: 10rem;
+          }
+          &::-webkit-scrollbar-track {
+            position: absolute;
+            right: -3rem;
+            top: -50rem;
+            background: transparent;
+          }
+
+          .userReviews {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            transition: 0.2s;
+            cursor: pointer;
+            color: themed("textColor");
+
+            span {
+              font-size: 0.8rem;
+            }
+
+            .userInfo {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              position: relative;
+              img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+          }
+          .userReviews:hover {
+            transition: 0.2s;
+            background-color: themed("bgSoft");
+          }
+          .userReviews:active {
+            transition: 0.2s;
+            scale: 98%;
+          }
+        }
+      }
+      .writeReview {
+        width: 95%;
+        margin: auto;
+        font-size: 14px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .write {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 1em;
+          padding: 1em 0.5em;
+
+          .userRatings {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            font-size: 1.3rem;
+            width: 100%;
+            text-align: center;
+          }
+          input {
+            width: 92%;
+            padding: 10px;
+            border: 1px solid themed("border");
+            border-radius: 0.4em;
+            background-color: transparent;
+            color: themed("text");
+          }
+
+          button {
+            align-self: flex-end;
+            border: 1px solid themed("textColor");
+            color: themed("textColor");
+            background: transparent;
+            padding: 0.6em 1.2em;
+            cursor: pointer;
+            border-radius: 200rem;
+            transition: 0.5s ease;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          button:hover {
+            scale: 97%;
+            transition: 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}

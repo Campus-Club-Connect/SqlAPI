@@ -1,0 +1,97 @@
+@import "../../style.scss";
+
+$nav-bg-accent: #484a4d;
+$text-color: #6c757d;
+$nav-size: 60px;
+$nav-border: 1px solid #474a4d;
+$nav-border-radius: 8px;
+$nav-speed: 500ms;
+
+.innerTabPolls {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-bottom: 1px solid theme("border");
+    position: sticky;
+    top: 0;
+    color: themed("textColor");
+    font-size: 1.3rem;
+    z-index: 999;
+    padding-top: 24px;
+
+    @include mobile {
+      padding: 4px 16px;
+      font-size: 1.2rem;
+    }
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: themed("bgSoft");
+      border-radius: 8px;
+      width: 100%;
+
+      @include mobile {
+      }
+
+      .nav {
+        width: 100%;
+        padding: 0.5em 2em;
+        transition: 0.2s;
+        cursor: pointer;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          font-size: 0.8rem;
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+      .nav:hover {
+        background-color: themed("bgSoft");
+        filter: brightness(90%);
+        transition: 0.2s;
+      }
+
+      .nav:active {
+        scale: 95%;
+        transform: perspective(1px) translateZ(0);
+        backface-visibility: hidden;
+      }
+      .active {
+        color: themed("bg");
+        background-color: #213266;
+      }
+      .active:hover {
+        color: themed("bg");
+        background-color: #213266e6;
+      }
+    }
+
+    .item1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      border-right: 1px solid black;
+      z-index: 2;
+    }
+    .item1 {
+      border-radius: 8px 0px 0px 8px;
+    }
+    .item2 {
+      border-radius: 0px 8px 8px 0px;
+    }
+  }
+}

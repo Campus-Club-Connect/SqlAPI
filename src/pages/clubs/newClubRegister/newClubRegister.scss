@@ -1,0 +1,32 @@
+@import "../../../style.scss";
+
+.newClubRegister-page {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    $height: 30px;
+
+    @include mobile {
+      padding: 0px;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .registrationContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 85px;
+
+      .allFill { 
+        flex: 1;
+        padding: 0px 60px;
+        padding-bottom: 30px;
+
+       
+      }
+    }
+  }
+}

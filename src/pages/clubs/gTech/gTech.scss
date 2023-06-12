@@ -1,0 +1,115 @@
+@import "../../../style.scss";
+
+.gtech-page {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    $height: 177px;
+
+    @include mobile {
+      padding: 0px;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .innerNavBar {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 20px;
+
+      .center {
+        height: calc(100vh - $height);
+        overflow: scroll;
+        flex: 6;
+        padding: 0px 60px;
+        padding-bottom: 30px;
+
+        &::-webkit-scrollbar {
+          width: 16px;
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #7b7d7f;
+          border: 7px solid themed("bgSoft");
+          border-radius: 10rem;
+        }
+        &::-webkit-scrollbar-track {
+          position: absolute;
+          right: -3rem;
+          top: -50rem;
+          background: transparent;
+        }
+      }
+
+      .right {
+        height: calc(100vh - $height);
+        overflow: scroll;
+
+        flex: 3;
+        padding-right: 20px;
+
+        &::-webkit-scrollbar {
+          width: 16px;
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #7b7d7f;
+          border: 7px solid #fff;
+          border-radius: 10rem;
+        }
+        &::-webkit-scrollbar-track {
+          position: absolute;
+          right: -3rem;
+          top: -50rem;
+          background: transparent;
+        }
+      }
+
+      h1 {
+        font-weight: 400;
+        color: themed("textColor");
+      }
+    }
+
+    .registrationContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 20px;
+
+      .allFill {
+        height: calc(100vh - $height);
+        overflow: scroll;
+        flex: 1;
+        padding: 0px 60px;
+        padding-bottom: 30px;
+
+        &::-webkit-scrollbar {
+          width: 16px;
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #7b7d7f;
+          border: 7px solid themed("bgSoft");
+          border-radius: 10rem;
+        }
+        &::-webkit-scrollbar-track {
+          position: absolute;
+          right: -3rem;
+          top: -50rem;
+          background: transparent;
+        }
+      }
+    }
+  }
+}

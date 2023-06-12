@@ -1,0 +1,79 @@
+@import "../../style.scss";
+$primary-color: #2c3b63;
+$secondary-color: #8f8f8f;
+$input-placeholder-color: #c1c1c1;
+$input-border-color: #c1c1c1;
+
+.club-registration-form {
+  width: 100%;
+
+  .form-header {
+    width: 800px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: $primary-color;
+    margin-top: 40px;
+  }
+
+  .form-divider {
+    width: 1060px;
+    height: 6px;
+    background-color: black;
+    margin-top: 40px;
+  }
+
+  .form-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    margin-top: 20px;
+  }
+
+  .form-divider-small {
+    width: 1060px;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px;
+  }
+  input {
+    // background-color:  ;
+    border: none; /* Remove the default border */
+    border-bottom: 1px solid black;
+    width: 30%;
+    margin-left: 47px;
+    margin-top: 30px;
+    height: 30px;
+    outline: none;
+    font-size: 18px;
+    background-color: transparent;
+  }
+  .left {
+    margin-left: 0px;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 60px; /* Adjust the margin-top value to your preference */
+
+    button {
+      width: 160px; /* Set button width to 160px */
+      height: 40px;
+      padding: 10px 20px;
+      background-color: #213266;
+      border: none;
+      border-radius: 8px; /* Add border radius of 8px */
+      margin-left: 10px; /* Add some space between buttons */
+      font-size: 20px;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: normal; /* Set font weight to normal */
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../style.scss";
+
+.home {
+  @include themify($themes) {
+    background-color: themed("bg");
+    margin: 20px 40px;
+    padding: 0px 20px;
+    height: calc(100vh - themed("navbarSizeChange"));
+    overflow: scroll;
+    
+    @include mobile {
+      padding: 0px;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    h1 {
+      font-weight: 400;
+      color: themed("textColor");
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../style.scss";
+
+$nav-bg-accent: #484a4d;
+$text-color: #6c757d;
+$nav-size: 60px;
+$nav-border: 1px solid rgb(190, 191, 193);
+$nav-border-radius: 8px;
+$nav-speed: 500ms;
+
+$bgOpacity: rgba(0, 0, 0, 0.7);
+$bgOpacityHover: rgba(0, 0, 0, 0.8);
+
+// DropDown Menu
+.dropdown {
+  @include themify($themes) {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 300px;
+    transform: translateX(0%);
+    background-color: $bgOpacity;
+    border: $nav-border;
+    border-radius: $nav-border-radius;
+    padding: 1rem;
+    overflow: hidden;
+
+    transition: height $nav-speed ease;
+
+    a {
+      color: themed("bg");
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    // Icon Button
+    .icon-button {
+      $button-size: calc($nav-size * 0.5);
+      width: $button-size;
+      height: $button-size;
+      border-radius: 50%;
+      margin: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: filter 300ms;
+      background-color: $bgOpacity;
+      padding: 0.2em;
+      margin-right: 1rem;
+    }
+    .icon-button svg {
+      fill: themed("textColor");
+      width: 18px;
+      height: 18px;
+    }
+
+    // .icon-button:hover {
+    //   background-color: themed("bgSoft");
+    // }
+
+    .menu-item {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-radius: $nav-border-radius;
+      transition: background $nav-speed;
+      padding: 0.5rem;
+    }
+
+    .menu-item:hover {
+      background-color: $bgOpacity;
+    }
+
+    .icon-right {
+      margin-left: auto;
+    }
+
+    .menu {
+      width: 100%;
+    }
+
+    .menu-primary-enter {
+      position: absolute;
+      transform: translateX(-110%);
+    }
+
+    .menu-primary-enter-active {
+      transform: translateX(0%);
+      transition: all $nav-speed ease;
+    }
+
+    .menu-primary-exit {
+      position: absolute;
+    }
+
+    .menu-primary-exit-active {
+      transform: translateX(-110%);
+      transition: all $nav-speed ease;
+    }
+
+    .menu-secondary-enter {
+      transform: translateX(110%);
+    }
+
+    .menu-secondary-enter-active {
+      transform: translateX(0%);
+      transition: all $nav-speed ease;
+    }
+
+    .menu-secondary-exit {
+    }
+
+    .menu-secondary-exit-active {
+      transform: translateX(110%);
+      transition: all $nav-speed ease;
+    }
+  }
+}

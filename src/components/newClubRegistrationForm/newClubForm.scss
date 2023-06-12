@@ -1,0 +1,135 @@
+@import "../../style.scss";
+$primary-color: #2c3b63;
+$secondary-color: #8f8f8f;
+$input-placeholder-color: #c1c1c1;
+$input-border-color: #c1c1c1;
+
+.textarea {
+  margin-top: 2rem;
+  width: 100%;
+  height: 10rem;
+}
+
+.leftbox {
+  float: left;
+  width: 40%;
+}
+
+.rightbox {
+  margin-left: 20%;
+  width: 40%;
+  float: left;
+}
+
+.club-registration-form {
+  width: 100%;
+
+  .form-header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column; /* Arrange text in a column */
+    justify-content: flex-start; /* Align text to the left */
+    align-items: flex-start; /* Align text to the left */
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    color: $primary-color;
+    margin-top: 0px;
+
+    .new-club,
+    .registration-form {
+      line-height: 1;
+    }
+  }
+
+  .form-divider {
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    margin-top: 40px;
+  }
+
+  .form-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    margin-top: 20px;
+  }
+
+  .form-divider-small {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 30%;
+    margin-left: 47px;
+    margin-top: 30px;
+    height: 30px;
+    outline: none;
+    font-size: 18px;
+    background-color: transparent;
+  }
+
+  .left {
+    margin-left: 0px;
+  }
+
+  .form-buttons {
+    clear: left;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px; /* Adjust the margin-top value to your preference */
+
+    button {
+      width: 160px;
+      height: 45px;
+      padding: 10px 30px;
+      background-color: #213266;
+      border: none;
+      border-radius: 8px;
+      margin-left: 105px;
+      font-size: 20px;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-weight: normal;
+      margin-top: 40px; /* Add margin-top value to lower the button */
+      margin-bottom: 90px; /* Add margin-bottom value for spacing below the button */
+    }
+  }
+}
+.leftbox .ele,
+.rightbox .ele {
+  width: 100%;
+  margin-left: 0;
+}
+
+.signature {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 100%;
+}

@@ -1,0 +1,18 @@
+@import "../../style.scss";
+
+.clubDiscussion {
+  @include themify($themes) {
+    min-height: 100vh;
+
+    @include mobile {
+      padding: 0px;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-weight: 400;
+      color: themed("textColor");
+    }
+  }
+}
