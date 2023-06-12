@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.773f2ed9.css",
+    "main.js": "/static/js/main.54856b20.js",
+    "static/media/rover.png": "/static/media/rover.f207059cec017fddbacb.png",
+    "static/media/g-tech.png": "/static/media/g-tech.1d8539e3e23d41f2e850.png",
+    "static/media/tarayana.png": "/static/media/tarayana.f0141da244ecaaba720c.png",
+    "static/media/rovers.png": "/static/media/rovers.dba60f5c8f1216c62281.png",
+    "static/media/cab.png": "/static/media/cab.aa0a21cd51921703c795.png",
+    "static/media/header.jpg": "/static/media/header.3f86a222df111e03aa70.jpg",
+    "static/media/G-tech.png": "/static/media/G-tech.23ff8ce579a85a4221b8.png",
+    "static/media/mmd.png": "/static/media/mmd.e94b378af678a9d124cd.png",
+    "static/media/lia.png": "/static/media/lia.60d514d4e6b12a9a6ef1.png",
+    "static/media/startup.png": "/static/media/startup.99adb425477b5aac4b6d.png",
+    "static/media/gtech.png": "/static/media/gtech.17396285e263520f11ee.png",
+    "static/media/integrity.png": "/static/media/integrity.09be4e3a5325cee18456.png",
+    "static/media/jamphel.jpg": "/static/media/jamphel.913412ec7b77981b725b.jpg",
+    "static/media/gtech.jpg": "/static/media/gtech.580920af6eff94747993.jpg",
+    "static/media/rovers.jpg": "/static/media/rovers.47c1d7f9fa5b2d8d5d03.jpg",
+    "static/media/integrity.jpg": "/static/media/integrity.05eced28bf3f3f1bb7a3.jpg",
+    "static/media/kinchapDorji.png": "/static/media/kinchapDorji.c68ce75ba84e0691f3bd.png",
+    "static/media/tarayana.jpg": "/static/media/tarayana.695c3505b10a388fb165.jpg",
+    "static/media/chimiDorji.png": "/static/media/chimiDorji.7d8a522b9d29ee8dbfe1.png",
+    "static/media/startup.jpg": "/static/media/startup.4f663e5463215947764d.jpg",
+    "static/media/mmd.jpg": "/static/media/mmd.5d1f0fdae7ff66456f1e.jpg",
+    "static/media/billDorji.png": "/static/media/billDorji.3ab3deb65f898c111fa6.png",
+    "static/media/kaliDorji.png": "/static/media/kaliDorji.ad5fd2ce7274ca441e04.png",
+    "static/media/logoColor.png": "/static/media/logoColor.60deac4b5f3c8610d1ad.png",
+    "static/media/lia.jpg": "/static/media/lia.1cdd9e41a3083c29c7a4.jpg",
+    "static/media/cccLogo.png": "/static/media/cccLogo.d03fd296552f672f3a38.png",
+    "index.html": "/index.html",
+    "main.773f2ed9.css.map": "/static/css/main.773f2ed9.css.map",
+    "main.54856b20.js.map": "/static/js/main.54856b20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.773f2ed9.css",
+    "static/js/main.54856b20.js"
+  ]
+}
